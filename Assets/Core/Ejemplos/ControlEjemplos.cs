@@ -4,7 +4,8 @@ namespace Ging1991.Core.Ejemplos {
 
 	public class ControlEjemplos : MonoBehaviour {
 
-		void Start() {
+
+		private void TestEstadisticas() {
 			Estadisticas estadisticas = Estadisticas.Instancia;
 
 			estadisticas.Incrementar("TURNOS");
@@ -19,6 +20,17 @@ namespace Ging1991.Core.Ejemplos {
 			FisicaEjemplo fisicaEjemplo = FisicaEjemplo.Instancia;
 			fisicaEjemplo.listador.AgregarElemento("triangulo", "3 angulos");
 			Debug.Log($"Listador {fisicaEjemplo.listador.GetLista("3 angulos").Count}");
+		}
+
+
+		void Start() {
+			//TestEstadisticas();
+
+			GestorDeSonidos gestor = GameObject.Find("ControlEjemplos").GetComponent<GestorDeSonidos>();
+			gestor.ReproducirSonido("FxSerpientes");
+			gestor.ReproducirSonido("FxSerpientes");
+			gestor.ReproducirSonido("FxSerpientes");
+			gestor.ReproducirSonido("FxSerpientes");
 
 		}
 

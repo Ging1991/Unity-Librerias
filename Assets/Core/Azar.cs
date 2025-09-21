@@ -17,16 +17,6 @@ namespace Ging1991.Core {
 			return elementos[GenerarEnteroEntre(0, elementos.Count)];
 		}
 
-
-		public static int ValorAleatorio(List<int> elementos) {
-			return elementos[GenerarEnteroEntre(0, elementos.Count)];
-		}
-
-
-		public static string ValorAleatorio(List<string> elementos) {
-			return elementos[GenerarEnteroEntre(0, elementos.Count)];
-		}
-
 	}
 
 }

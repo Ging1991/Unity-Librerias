@@ -56,5 +56,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Librerias.sln"
+    "dotnet.defaultSolution": "Librerias.sln",
+    "dotnet.projects.enableFileBasedProjects": false,
+    "dotnet.projects.enableFileBasedPrograms": false,
+    "dotnet.enableFileBasedProjects": false
 }

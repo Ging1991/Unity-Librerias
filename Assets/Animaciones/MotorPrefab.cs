@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Ging1991.Animaciones.Neo {
+namespace Ging1991.Animaciones {
 
 	public class MotorPrefab : MonoBehaviour {
 
@@ -11,10 +11,9 @@ namespace Ging1991.Animaciones.Neo {
 			if (animaciones == null || animaciones.Count == 0)
 				return;
 
-			foreach (var anim in animaciones) {
-				if (anim == null)
-					continue;
-				anim.AnimacionDirecta();
+			foreach (var animacion in animaciones) {
+				if (animacion != null)
+					animacion.AnimacionDirecta();
 			}
 		}
 

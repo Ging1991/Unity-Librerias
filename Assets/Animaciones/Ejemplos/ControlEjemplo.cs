@@ -1,10 +1,13 @@
-using Ging1991.Animaciones.Neo;
 using UnityEngine;
 
-public class ControlEjemplo : MonoBehaviour {
+namespace Ging1991.Animaciones.Ejemplos {
 
-	void Start() {
-		GameObject.Find("Explosion").GetComponent<MotorPrefab>().Animar();
+	public class ControlEjemplo : MonoBehaviour {
+
+		void Start() {
+			GameObject.Find("Explosion").GetComponent<MotorPrefab>().Animar();
+		}
+
 	}
 
 }

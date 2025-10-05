@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Ging1991.Animaciones.Neo {
+namespace Ging1991.Animaciones.Efectos {
 
 	public class Trasparentar : AnimacionBase {
 

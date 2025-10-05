@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Ging1991.Animaciones.Neo {
+namespace Ging1991.Animaciones.Efectos {
 
 	public class Escalar : AnimacionBase {
 

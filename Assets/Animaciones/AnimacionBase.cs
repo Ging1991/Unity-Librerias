@@ -1,7 +1,7 @@
 using Ging1991.Relojes;
 using UnityEngine;
 
-namespace Ging1991.Animaciones.Neo {
+namespace Ging1991.Animaciones {
 	
 	public abstract class AnimacionBase : MonoBehaviour, IEjecutable {
 
@@ -57,8 +57,8 @@ namespace Ging1991.Animaciones.Neo {
 			if (SigueAnimando()) {
 				AplicarCambio();
 				pasosRestantes--;
-			}
-			else {
+			
+			} else {
 				AplicarCambio();
 				Finalizar();
 			}
@@ -68,6 +68,7 @@ namespace Ging1991.Animaciones.Neo {
 		public void Cancelar(bool ejecutarCallback = false) {
 			if (estaCancelada)
 				return;
+				
 			estaCancelada = true;
 			pasosRestantes = 0;
 

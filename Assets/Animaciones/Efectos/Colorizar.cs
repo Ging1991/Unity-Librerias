@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Ging1991.Animaciones.Neo {
+namespace Ging1991.Animaciones.Efectos {
 
 	public class Colorizar : AnimacionBase {
 
@@ -48,9 +48,9 @@ namespace Ging1991.Animaciones.Neo {
 		private void SetColor(Color color) {
 			if (imagenes == null) return;
 
-			foreach (var img in imagenes) {
-				if (img == null) continue;
-				img.color = color;
+			foreach (var imagen in imagenes) {
+				if (imagen != null)
+					imagen.color = color;
 			}
 		}
 

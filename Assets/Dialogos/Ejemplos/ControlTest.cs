@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Ging1991.Dialogos;
 using Ging1991.Dialogos.Persistencia;
 using Ging1991.Dialogos.Test;
@@ -13,20 +12,11 @@ namespace Ging1991.Persistencia.Tests {
 
 		void Start() {
 			string direccion = new DireccionRecursos("datos", "dialogo").Generar();
-			LectorTest<AccionTest> lector = new LectorTest<AccionTest>(direccion);
-			GrupoAcciones<AccionTest> grupo = lector.Leer();
-			List<IAccionEspecial> lista = new List<IAccionEspecial>();
-			foreach (var accion in grupo.lista) {
-				lista.Add(accion);
-			}
-			dialogo.Inicializar(grupo.lista);
-		}
-
-		public class Imaginador : IGetImagen {
-			public Sprite GetImagen(string nombre) {
-				return null;
-			}
+			LectorListaGenerica<AccionTest> lector = new(direccion, Lectores.TipoLector.RECURSOS);
+			LectorImagenes lectorImagenes = new(new DireccionRecursos("imagenes"));
+			dialogo.Inicializar(lector.GetLista(), lectorImagenes, lectorImagenes);
 		}
 
 	}
+
 }

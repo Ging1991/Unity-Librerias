@@ -11,24 +11,28 @@ namespace Ging1991.Dialogos {
 		public PantallaTactil pantallaTactil;
 		public Interprete<T> interprete;
 		private List<T> acciones;
-		private int indice;
+		public int indice;
 
-		public void Inicializar(List<T> acciones) {
+		public void Inicializar(List<T> acciones, IGetImagen ilustradorMiniatura, IGetImagen ilustradorPersonajes) {
 			this.acciones = acciones;
 			pantallaTactil.Inicializar(this);
+			interprete.Inicializar(ilustradorMiniatura, ilustradorPersonajes);
 			indice = 0;
 		}
 
 		public void Ejecutar() {
+			bool ejecutarSiguienteAccion = false;
 			if (interprete.secuenciandoTexto) {
-				interprete.MostrarTextoCompleto();
+				interprete.textoSecuencial.MostrarTextoCompleto();
 			}
 			else {
 				if (acciones.Count > indice) {
-					interprete.InterpretarAccion(acciones[indice]);
+					ejecutarSiguienteAccion = interprete.InterpretarAccion(acciones[indice]);
 					indice++;
 				}
 			}
+			if (ejecutarSiguienteAccion)
+				Ejecutar();
 		}
 
 	}

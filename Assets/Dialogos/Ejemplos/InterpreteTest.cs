@@ -5,8 +5,9 @@ namespace Ging1991.Dialogos.Interpretes {
 
 	public class InterpreteTest : Interprete<AccionTest> {
 
-		public override void InterpretarAccionEspecial(AccionTest accion) {
+		public override bool InterpretarAccionEspecial(AccionTest accion) {
 			Debug.Log("Texto especial: " + accion.textoDebug);
+			return true;
 		}
 
 	}

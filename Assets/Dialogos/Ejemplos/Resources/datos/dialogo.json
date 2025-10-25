@@ -1,0 +1,17 @@
+{
+	"lista" : [
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Texto de prueba N°1",
+			"textoDebug" : "Texto debug"
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Texto de prueba N°2"
+		},
+		{
+			"tipo" : "MOSTRAR_TEXTO",
+			"texto" : "Texto de prueba N°3"
+		}
+	]
+}

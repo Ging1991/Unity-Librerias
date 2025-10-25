@@ -5,9 +5,9 @@ namespace Ging1991.Dialogos {
 
 	public class Personaje : MonoBehaviour {
 
-		private IProveedorImagen proveedor;
+		private IGetImagen proveedor;
 
-		public void Inicializar(IProveedorImagen proveedor) {
+		public void Inicializar(IGetImagen proveedor) {
 			this.proveedor = proveedor;
 		}
 

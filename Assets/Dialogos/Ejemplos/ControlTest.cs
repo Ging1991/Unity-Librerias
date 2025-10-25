@@ -1,18 +1,32 @@
+using System.Collections.Generic;
 using Ging1991.Dialogos;
+using Ging1991.Dialogos.Persistencia;
+using Ging1991.Dialogos.Test;
+using Ging1991.Persistencia.Direcciones;
 using UnityEngine;
 
-public class ControlTest : MonoBehaviour {
+namespace Ging1991.Persistencia.Tests {
 
-	public Dialogo dialogo;
+	public class ControlTest : MonoBehaviour {
 
-	void Start() {
-		//dialogo.Inicializar(new Imaginador(), new Imaginador());
-	}
+		public Dialogo<AccionTest> dialogo;
 
-	public class Imaginador : IProveedorImagen {
-		public Sprite GetImagen(string nombre) {
-			return null;
+		void Start() {
+			string direccion = new DireccionRecursos("datos", "dialogo").Generar();
+			LectorTest<AccionTest> lector = new LectorTest<AccionTest>(direccion);
+			GrupoAcciones<AccionTest> grupo = lector.Leer();
+			List<IAccionEspecial> lista = new List<IAccionEspecial>();
+			foreach (var accion in grupo.lista) {
+				lista.Add(accion);
+			}
+			dialogo.Inicializar(grupo.lista);
 		}
-	}
 
+		public class Imaginador : IGetImagen {
+			public Sprite GetImagen(string nombre) {
+				return null;
+			}
+		}
+
+	}
 }

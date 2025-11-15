@@ -1,0 +1,32 @@
+{
+	"valor" : [
+		{
+			"clave":"BASICO",
+			"valor":"BASIC"
+		},
+		{
+			"clave":"EVOLUCION",
+			"valor":"EVOLUTION"
+		},
+		{
+			"clave":"FUSION",
+			"valor":"FUSION"
+		},
+		{
+			"clave":"MAGICO",
+			"valor":"MAGIC"
+		},
+		{
+			"clave":"VECTOR",
+			"valor":"VOID"
+		},
+		{
+			"clave":"REFLEJO",
+			"valor":"MIRROR"
+		},
+		{
+			"clave":"GEMINIS",
+			"valor":"GEMIS"
+		}
+ 	]
+}

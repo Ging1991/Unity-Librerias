@@ -1,0 +1,20 @@
+{
+	"valor" : [
+		{
+			"clave":"HECHICERO",
+			"valor":"SPELLCASTER"
+		},
+		{
+			"clave":"PLANTA",
+			"valor":"PLANT"
+		},
+		{
+			"clave":"REPTIL",
+			"valor":"REPTILE"
+		},
+		{
+			"clave":"HADA",
+			"valor":"FAIRY"
+		}
+ 	]
+}
